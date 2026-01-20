@@ -1,0 +1,114 @@
+@media (max-width: 600px) {
+    .login-card-wrapper {
+        padding-top: 2vh;
+        height: auto;
+        min-height: 100vh;
+    }
+    .login-card {
+        width: 97vw;
+        max-width: 300px;
+        padding: 0.7em 0.5em 1em 0.5em;
+        border-radius: 8px;
+        gap: 0.7rem;
+    }
+    .login-card h1 {
+        font-size: 1.1rem;
+        margin-bottom: 0.3rem;
+    }
+    .login-card input {
+        font-size: 0.95em;
+        padding: 0.4em 0.7em;
+        margin-bottom: 0.4rem;
+        border-radius: 5px;
+    }
+    .login-card button {
+        font-size: 0.95em;
+        padding: 0.4em 0.7em;
+        border-radius: 5px;
+    }
+    .create-account-link {
+        font-size: 0.95em;
+        padding-left: 0;
+    }
+}
+.login-card-wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: #f6f7fb;
+    font-family: 'Segoe UI', 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    padding-top: 7vh;
+    box-sizing: border-box;
+}
+
+.login-card {
+    width: 350px;
+    padding: 2.5rem 2rem 2rem 2rem;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.10);
+    border-radius: 14px;
+    background-color: #fff;
+    border: 1.5px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.login-card h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: #22223b;
+    text-align: center;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    margin-bottom: 0.7rem;
+    border: 1.5px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+    background: #f8fafc;
+}
+.login-card input:focus {
+    border: 1.5px solid #a3a3ff;
+    background: #fff;
+}
+
+.login-card button {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    background: #BFA181;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(35,41,70,0.10);
+    letter-spacing: 0.5px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.login-card button:hover {
+    background: #ad8956;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(166,138,100,0.13);
+}
+
+.create-account-link,
+.create-account-link:visited,
+.create-account-link:active,
+.create-account-link:hover {
+    color: #BFA181;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.2s;
+    margin: 0;
+    padding-left: 0.2rem;
+    outline: none;
+}
