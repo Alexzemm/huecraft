@@ -3,7 +3,6 @@ import './Login.css';
 import { useState } from 'react';
 
 function Login({ onLogin }) {
-    const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
@@ -16,7 +15,7 @@ function Login({ onLogin }) {
             const res = await fetch('http://localhost:4000/api/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ username, password })
+                body: JSON.stringify({ password })
             });
             const data = await res.json();
             if (data.success) {
@@ -38,14 +37,6 @@ function Login({ onLogin }) {
                 <form className="login-card" onSubmit={handleSubmit}>
                     <h1>Login</h1>
                     <input
-                        type="text"
-                        placeholder="Username"
-                        value={username}
-                        onChange={e => setUsername(e.target.value)}
-                        autoComplete="username"
-                        required
-                    />
-                    <input
                         type="password"
                         placeholder="Password"
                         value={password}
@@ -55,10 +46,6 @@ function Login({ onLogin }) {
                     />
                     {error && <div style={{ color: 'crimson', marginBottom: '0.5rem', fontSize: '1rem' }}>{error}</div>}
                     <button type="submit" disabled={loading}>{loading ? 'Logging in...' : 'Submit'}</button>
-                    <div className="create-account-row">
-                        <span className="create-account-prompt">New to Huecraft?</span>
-                        <a href="#" className="create-account-link">Create Account</a>
-                    </div>
                 </form>
             </div>
         </>
