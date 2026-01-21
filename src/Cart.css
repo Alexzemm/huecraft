@@ -1,3 +1,63 @@
+.cart-share-btn {
+	width: 100%;
+	margin-top: 8px;
+	background: #25D366;
+	color: #fff;
+	border: none;
+	border-radius: 6px;
+	padding: 0.7em 0;
+	font-weight: 600;
+	font-size: 1em;
+	cursor: pointer;
+	transition: background 0.18s;
+	box-shadow: 0 1px 4px rgba(35,41,70,0.07);
+}
+.cart-share-btn:hover {
+	background: #1da851;
+}
+.cart-item-img {
+	width: 48px;
+	height: 48px;
+	object-fit: cover;
+	border-radius: 8px;
+	margin-right: 12px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+	background: #f7f7f7;
+}
+
+.cart-checkout-btn {
+	width: 100%;
+	margin-top: 12px;
+	background: #BFA181;
+	color: #fff;
+	border: none;
+	border-radius: 6px;
+	padding: 0.7em 0;
+	font-weight: 600;
+	font-size: 1em;
+	cursor: pointer;
+	transition: background 0.18s;
+}
+.cart-checkout-btn:hover {
+	background: #ad8956;
+}
+
+.cart-whatsapp-btn {
+	width: 100%;
+	margin-top: 8px;
+	background: #25D366;
+	color: #fff;
+	border: none;
+	border-radius: 6px;
+	padding: 0.7em 0;
+	font-weight: 600;
+	font-size: 1em;
+	cursor: pointer;
+	transition: background 0.18s;
+}
+.cart-whatsapp-btn:hover {
+	background: #1da851;
+}
 
 .cart-root {
 	background: #fff;

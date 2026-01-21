@@ -27,7 +27,6 @@ function MainPage({ onCartClick, cartItems, setCartItems }) {
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [selectedSize, setSelectedSize] = useState('All');
     const [selectedPrice, setSelectedPrice] = useState('All');
-    const [order, setOrder] = useState([]);
     const [zoomImg, setZoomImg] = useState(null); // {src, alt}
 
     // Filtered products
@@ -41,17 +40,17 @@ function MainPage({ onCartClick, cartItems, setCartItems }) {
     });
 
     function addToOrder(product) {
-        if (!order.find(item => item.id === product.id)) {
-            setOrder([...order, product]);
+        if (!cartItems.find(item => item.id === product.id)) {
+            setCartItems([...cartItems, product]);
         }
     }
     function removeFromOrder(id) {
-        setOrder(order.filter(item => item.id !== id));
+        setCartItems(cartItems.filter(item => item.id !== id));
     }
 
     function shareWhatsApp() {
-        const text = order.length
-            ? `Order from Huecraft:%0A` + order.map(p => `• ${p.name} (${p.size}) - $${p.price}`).join('%0A')
+        const text = cartItems.length
+            ? `Order from Huecraft:%0A` + cartItems.map(p => `• ${p.name} (${p.size}) - $${p.price}`).join('%0A')
             : 'No items in order.';
         window.open(`https://wa.me/?text=${text}`);
     }
@@ -135,8 +134,8 @@ function MainPage({ onCartClick, cartItems, setCartItems }) {
                                             <span>{product.size}</span>
                                             <span>${product.price}</span>
                                         </div>
-                                        <button onClick={() => addToOrder(product)} disabled={!!order.find(i => i.id === product.id)}>
-                                            {order.find(i => i.id === product.id) ? 'Added' : 'Add to Order'}
+                                        <button onClick={() => addToOrder(product)} disabled={!!cartItems.find(i => i.id === product.id)}>
+                                            {cartItems.find(i => i.id === product.id) ? 'Added' : 'Add to Order'}
                                         </button>
                                     </div>
                                 </div>
