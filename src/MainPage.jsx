@@ -22,7 +22,7 @@ const priceRanges = [
     { label: 'Above $1500', min: 1501, max: Infinity },
 ];
 
-function MainPage() {
+function MainPage({ onCartClick, cartItems, setCartItems }) {
     const [search, setSearch] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [selectedSize, setSelectedSize] = useState('All');
@@ -58,7 +58,7 @@ function MainPage() {
 
     return (
         <div className="mainpage-root">
-            <Header />
+            <Header onCartClick={onCartClick} />
             <div className="mainpage-content">
                 {/* Sidebar Filters */}
                 <aside className="mainpage-sidebar">
