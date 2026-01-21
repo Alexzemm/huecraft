@@ -1,13 +1,16 @@
 import './Header.css'
 import cart from './assets/cart.png'
 
-function Header({ onCartClick }) {
+// Add 'showCart' prop to control cart button visibility
+function Header({ onCartClick, showCart = true }) {
     return(
         <header>
             <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <h1>Huecraft</h1>
             </a>
-            <img src={cart} alt="cart" style={{ cursor: 'pointer' }} onClick={onCartClick} />
+            {showCart && (
+                <img src={cart} alt="cart" style={{ cursor: 'pointer' }} onClick={onCartClick} />
+            )}
         </header>
     )
 }

@@ -32,7 +32,7 @@ function Login({ onLogin }) {
 
     return (
         <>
-            <Header />
+            <Header showCart={false} />
             <div className="login-card-wrapper">
                 <form className="login-card" onSubmit={handleSubmit}>
                     <h1>Login</h1>
